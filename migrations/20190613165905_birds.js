@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('bird_name')
     table.string('Family_breed')
     table.string('image')
+    table.string('Meaning')
   })
 }
 
