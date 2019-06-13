@@ -15,10 +15,6 @@ const router = express.Router()
 // })
 
 router.get('/', (req, res) => {
-  db.getBirds()
-    .then(users => {
-      res.render('index')
-    })
   res.render('index')
 })
 
