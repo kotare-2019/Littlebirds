@@ -7,10 +7,13 @@ module.exports = {
   getBirdProfile: getBirdProfile
 }
 
-function getBirds (db = connection) {
+function getBirds(db = connection) {
   return db('birds').select()
 }
 
-function getBirdProfile (id, db = connection) {
-  return db('birds').where('id', id).first()
+function getBirdProfile(id, db = connection) {
+  return db('birds')
+    .join('locations', 'locations.id', '=', 'birds.id')
+    .select()
+   
 }
