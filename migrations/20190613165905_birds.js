@@ -2,7 +2,8 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('birds', (table) => {
     table.increments('id').primary()
-    table.string('name')
+    table.string('bird_name')
+    table.string('image')
   })
 }
 
