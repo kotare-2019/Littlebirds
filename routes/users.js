@@ -15,14 +15,13 @@ const router = express.Router()
 // })
 
 router.get('/', (req, res) => {
-  db.getBirds()
-    .then(users => {
-      res.render('index')
-    })
   res.render('index')
 })
 
 router.get('/profile/:id', (req, res) => {
-  res.render('profile')
+  db.getBirdProfile(req.params.id)
+    .then(profile => {
+      res.send(profile)
+    })
 })
 module.exports = router
