@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/profile/:id', (req, res) => {
   db.getBirdProfile(req.params.id)
     .then(profile => {
-      res.send(profile)
+      res.render('profile', profile)
     })
 })
 module.exports = router
