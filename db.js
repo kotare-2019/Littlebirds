@@ -14,6 +14,7 @@ function getBirds(db = connection) {
 function getBirdProfile(id, db = connection) {
   return db('birds')
     .join('locations', 'locations.id', '=', 'birds.id')
+    .where({'birds.id': id})
     .select()
-   
+    .first() 
 }
