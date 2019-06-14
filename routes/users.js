@@ -26,7 +26,7 @@ router.get('/profile/:id', (req, res) => {
 })
 
 router.get('/add', (req, res) => {
-  res.render('addbird')
+  res.render('add')
 })
 
 router.post('/add', (req, res) => {
