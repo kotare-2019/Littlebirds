@@ -30,13 +30,19 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  db.addBird(req.body.bird_name === '' || req.body.Family_breed === '' || 
-  req.body.image === '' || 
-  req.body.Meaning === '') 
-  .then(bird => {
-    console.log(bird);
-    res.redirect('/profile/${bird[0]}')
-  })
+  console.log(req.body)
+  // const bird = {
+  //   bird_name: req.body.bird_name,
+  //   Family_breed: req.body.Family_breed,
+  //   image: req.body.image,
+  //   Meaning: req.body.Meaning,
+  // }
+
+  db.addBird(bird)
+    .then(bird => {
+      console.log(bird);
+      res.redirect('/profile/${bird[0]}')
+    })
 })
 
 module.exports = router

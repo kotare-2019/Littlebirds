@@ -20,8 +20,8 @@ function getBirdProfile(id, db = connection) {
     .first() 
 }
 
-function addBird (db = connection) {
-  db('birds').insert({bird_name:' ', Family_breed: '', image: '', Meaning: ''})
+function addBird (bird, db = connection) {
+  db('birds').insert(bird)
    .then(birdsId => {
      console.log('New record' + birdsId[0])
    })
