@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 module.exports = {
   getBirds: getBirds,
   getBirdProfile: getBirdProfile,
-  addBird: addBird
+  addBird: addBird,
+  addLocation: addLocation
 }
 
 function getBirds(db = connection) {
@@ -20,9 +21,19 @@ function getBirdProfile(id, db = connection) {
     .first()
 }
 
-function addBird(db = connection) {
-  db('birds').insert({ bird_name: ' ', Family_breed: '', image: '', Meaning: '' })
+
+function addBird(bird, location, db = connection) {
+  return db('birds').insert(bird)
     .then(birdsId => {
-      console.log('New record' + birdsId[0])
+      console.log('New record' + birdsId[0], location)
+      console.log(location)
     })
+}
+
+function addLocation (location, db = connection){
+  return db('locations')
+        .insert(location)
+        .then(locationsId => {
+          console.log('New location' + locationsId[0])
+        })
 }
