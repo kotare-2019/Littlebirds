@@ -25,7 +25,18 @@ router.get('/profile/:id', (req, res) => {
     })
 })
 
+router.get('/add', (req, res) => {
+  res.render('addbird')
+})
 
-
+router.post('/add', (req, res) => {
+  db.addBird(req.body.bird_name === '' || req.body.Family_breed === '' || 
+  req.body.image === '' || 
+  req.body.Meaning === '') 
+  .then(bird => {
+    console.log(bird);
+    res.redirect('/profile/${bird[0]}')
+  })
+})
 
 module.exports = router
