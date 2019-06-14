@@ -1,0 +1,43 @@
+<div class="hero-image2">
+  <div class="hero-text">
+    <h1>What's your favourite bird?</span></h1>
+    <h4>Let us know, add your favourite New Zealand native bird!</h4>
+  </div>
+</div>
+
+<form action="/add" method="post" class="addform">
+  <ul>
+    <li>
+      <label for="name">Bird Name</label>
+      <input type="text" name="name" maxlength="100">
+      <span>Enter the birds name here!</span>
+    </li>
+    <li>
+      <label for="name">Birds Family</label>
+      <input type="text" name="family" maxlength="100">
+      <span>What breed family is the bird from?</span>
+    </li>
+    <li>
+      <label for="location">Location</label>
+      <input type="text" name="location" maxlength="100">
+      <span>Where is the bird normally located?</span>
+    </li>
+    <li>
+      <label for="bio">Decription</label>
+      <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+      <span>Talk about the bird!</span>
+    </li>
+    <li>
+      <label for="image">Image</label>
+      <input type="url" name="image" maxlength="100">
+      <span>Upload an image of it!</span>
+    </li>
+    <li>
+      <input type="submit" value="Send This">
+    </li>
+  </ul>
+  </br>
+  <div class="align-center">
+    <a href="/">Go to Homepage</a>
+  </div>
+</form>

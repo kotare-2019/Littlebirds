@@ -3,14 +3,37 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers
+  getBirds: getBirds,
+  getBirdProfile: getBirdProfile,
+  addBird: addBird,
+  addLocation: addLocation
 }
 
-function getUsers (db = connection) {
-  return db('users').select()
+function getBirds(db = connection) {
+  return db('birds').select()
 }
 
-function getUser (id, db = connection) {
-  return db('users').where('id', id).first()
+function getBirdProfile(id, db = connection) {
+  return db('birds')
+    .join('locations', 'locations.id', '=', 'birds.id')
+    .where({ 'birds.id': id })
+    .select()
+    .first()
+}
+
+
+function addBird(bird, location, db = connection) {
+  return db('birds').insert(bird)
+    .then(birdsId => {
+      console.log('New record' + birdsId[0], location)
+      console.log(location)
+    })
+}
+
+function addLocation (location, db = connection){
+  return db('locations')
+        .insert(location)
+        .then(locationsId => {
+          console.log('New location' + locationsId[0])
+        })
 }

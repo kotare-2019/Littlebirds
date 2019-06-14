@@ -1,14 +1,17 @@
 body, html {
   height: 100%;
+  background-color: #dfdfdf
 }
 
 .hero-image {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("placeholder.jpg");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/placeholder.jpg");
 height: 50%;
-background-position: center;
+background-position: top;
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
+font-family: 'Arimo', sans-serif;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hero-text {
@@ -18,4 +21,239 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: white;
+text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrapper {
+  padding: 100px;
+  text-align: center;
+}
+
+.image--cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+
+  object-fit: cover;
+  object-position: center right;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-color: #66ff66;
+  border-style: solid;
+  border-width: 3px;
+}
+
+figure.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.caption {
+  display: block;
+  font-family: 'Arimo', sans-serif;
+}
+
+.profile-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 20px;
+
+  object-fit: cover;
+  object-position: center right;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-color: #66ff66;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.align-center {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+}
+
+.profile-text {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  padding-left: 25%;
+  padding-right: 25%
+}
+
+.profile-title {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a.invisible {
+  text-decoration: none;
+  color: black;
+}
+
+.hero-image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero2.JPG");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: 'Arimo', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.addform{
+	max-width:400px;
+	margin:50px auto;
+	background:#dfdfdf;
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.addform h1{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #444444;
+	font-size:x-large;
+}
+.addform ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+.addform li{
+	display: block;
+	padding: 9px;
+	border:1px solid #444444;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.addform li:last-child{
+	border:none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.addform li > label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #dfdfdf;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	color: #444444;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.addform input[type="text"],
+.addform input[type="date"],
+.addform input[type="datetime"],
+.addform input[type="email"],
+.addform input[type="number"],
+.addform input[type="search"],
+.addform input[type="time"],
+.addform input[type="url"],
+.addform input[type="password"],
+.addform textarea,
+.addform select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #dfdfdf;
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+}
+.addform input[type="text"]:focus,
+.addform input[type="date"]:focus,
+.addform input[type="datetime"]:focus,
+.addform input[type="email"]:focus,
+.addform input[type="number"]:focus,
+.addform input[type="search"]:focus,
+.addform input[type="time"]:focus,
+.addform input[type="url"]:focus,
+.addform input[type="password"]:focus,
+.addform textarea:focus,
+.addform select:focus 
+{
+}
+.addform li > span{
+	background: #dfdfdf;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #444444;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.addform textarea{
+  resize:none;
+  background-color: #dfdfdf
+}
+.addform input[type="submit"],
+.addform input[type="button"]{
+	background: #0BC40F;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5BDC5E;
+	border-radius: 3px;
+  color: #444444;
+}
+.addform input[type="submit"]:hover,
+.addform input[type="button"]:hover{
+	background: #5BDC5E;
+  color:#dfdfdf;
+}
+
+button{
+  background:#0BC40F;
+  color:#dfdfdf;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#dfdfdf;
+  color:#0BC40F;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #0BC40F;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
