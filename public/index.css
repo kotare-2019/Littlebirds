@@ -104,3 +104,118 @@ a.invisible {
   font-family: 'Arimo', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+.addform{
+	max-width:400px;
+	margin:50px auto;
+	background:#dfdfdf;
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.addform h1{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #444444;
+	font-size:x-large;
+}
+.addform ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+.addform li{
+	display: block;
+	padding: 9px;
+	border:1px solid #444444;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.addform li:last-child{
+	border:none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.addform li > label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #dfdfdf;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	color: #444444;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.addform input[type="text"],
+.addform input[type="date"],
+.addform input[type="datetime"],
+.addform input[type="email"],
+.addform input[type="number"],
+.addform input[type="search"],
+.addform input[type="time"],
+.addform input[type="url"],
+.addform input[type="password"],
+.addform textarea,
+.addform select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #dfdfdf;
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+}
+.addform input[type="text"]:focus,
+.addform input[type="date"]:focus,
+.addform input[type="datetime"]:focus,
+.addform input[type="email"]:focus,
+.addform input[type="number"]:focus,
+.addform input[type="search"]:focus,
+.addform input[type="time"]:focus,
+.addform input[type="url"]:focus,
+.addform input[type="password"]:focus,
+.addform textarea:focus,
+.addform select:focus 
+{
+}
+.addform li > span{
+	background: #dfdfdf;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #444444;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.addform textarea{
+  resize:none;
+  background-color: #dfdfdf
+}
+.addform input[type="submit"],
+.addform input[type="button"]{
+	background: #0BC40F;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5BDC5E;
+	border-radius: 3px;
+  color: #444444;
+}
+.addform input[type="submit"]:hover,
+.addform input[type="button"]:hover{
+	background: #5BDC5E;
+  color:#dfdfdf;
+}
