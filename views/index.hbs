@@ -5,7 +5,7 @@
   </div>
 </div>
 <div class="wrapper">
-  <figure class="item">
+  {{!-- <figure class="item">
     <a class="invisible" href="/profile/3">
       <img src="/images/Piwakawaka.jpg" class="image--cover">
       <figcaption class="caption">Piwakawaka</figcaption>
@@ -24,7 +24,18 @@
       <img src="/images/kotare.jpg" alt="" class="image--cover" />
       <figcaption class="caption">Kotare</figcaption>
     </a>
+  </figure> --}}
+
+  {{#each birds}}
+
+  <figure class="item">
+    <a class="invisible" href="/profile/{{id}}">
+      <img src={{image}} alt="" class="image--cover" />
+      <figcaption class="caption">{{bird_name}}</figcaption>
+    </a>
   </figure>
+
+  {{/each}}
 
   </br>
   </br>
