@@ -15,14 +15,15 @@ function getBirds(db = connection) {
 function getBirdProfile(id, db = connection) {
   return db('birds')
     .join('locations', 'locations.id', '=', 'birds.id')
-    .where({'birds.id': id})
+    .where({ 'birds.id': id })
     .select()
-    .first() 
+    .first()
 }
 
-function addBird (bird, db = connection) {
+
+function addBird(bird, db = connection) {
   db('birds').insert(bird)
-   .then(birdsId => {
-     console.log('New record' + birdsId[0])
-   })
+    .then(birdsId => {
+      console.log('New record' + birdsId[0])
+    })
 }
