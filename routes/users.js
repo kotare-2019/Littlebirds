@@ -24,4 +24,8 @@ router.get('/profile/:id', (req, res) => {
       res.render('profile', profile)
     })
 })
+
+
+
+
 module.exports = router
