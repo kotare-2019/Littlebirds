@@ -31,17 +31,21 @@ router.get('/add', (req, res) => {
 
 router.post('/add', (req, res) => {
   console.log(req.body)
-  // const bird = {
-  //   bird_name: req.body.bird_name,
-  //   Family_breed: req.body.Family_breed,
-  //   image: req.body.image,
-  //   Meaning: req.body.Meaning,
-  // }
+  const bird = {
+    bird_name: req.body.name,
+    Family_breed: req.body.family,
+    image: req.body.image,
+    Meaning: req.body.bio,
+  }
+  const location = {
+    Location: req.body.location
+  }
 
-  db.addBird(bird)
+  db.addBird(bird, location)
     .then(bird => {
+      db.addLocation(location)
       console.log(bird);
-      res.redirect('/profile/${bird[0]}')
+      res.redirect('/')
     })
 })
 
